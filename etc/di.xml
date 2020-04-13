@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="taskmanager_listing_data_source" xsi:type="string">Sakib\TaskManager\Model\ResourceModel\Tasks\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Sakib\TaskManager\Model\ResourceModel\Tasks\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">task_manager</argument>
+            <argument name="resourceModel" xsi:type="string">Sakib\TaskManager\Model\ResourceModel\Tasks</argument>
+        </arguments>
+    </virtualType>
+</config>

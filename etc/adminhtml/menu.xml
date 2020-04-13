@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sakib_TaskManager::taskmanager"
+             title="Task Manager"
+             module="Sakib_TaskManager"
+             sortOrder="50"
+             resource="Sakib_TaskManager::taskmanager"/>
+        <add id="Sakib_TaskManager::task"
+             title="Manage Tasks"
+             module="Sakib_TaskManager"
+             sortOrder="10"
+             action="taskmanager/tasks"
+             resource="Sakib_TaskManager::list"
+             parent="Sakib_TaskManager::taskmanager"/>
+    </menu>
+</config>
